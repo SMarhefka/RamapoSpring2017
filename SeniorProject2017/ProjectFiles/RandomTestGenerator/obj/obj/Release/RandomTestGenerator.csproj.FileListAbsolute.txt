@@ -1,0 +1,2 @@
+C:\Users\Svetlana Marhefka\Documents\Visual Studio 2013\Projects\SeniorProject\SeniorProject\RandomTestGenerator\RandomTestGenerator\bin\Release\RandomTestGenerator.exe
+C:\Users\Svetlana Marhefka\Documents\Visual Studio 2013\Projects\SeniorProject\SeniorProject\RandomTestGenerator\RandomTestGenerator\bin\Release\RandomTestGenerator.pdb
