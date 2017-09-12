@@ -1,0 +1,56 @@
+/* Create seniorproject database */
+CREATE DATABASE `seniorproject` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+/* Create user_login table */
+CREATE TABLE `user_login` (
+  `UserName` char(26) NOT NULL,
+  `FirstName` varchar(25) DEFAULT NULL,
+  `LastName` varchar(25) DEFAULT NULL,
+  `School` varchar(45) DEFAULT NULL,
+  `SchoolEmail` varchar(45) DEFAULT NULL,
+  `Instructor` tinyint(1) DEFAULT NULL,
+  `FirstLogin` tinyint(1) DEFAULT NULL,
+  `Password` varchar(999) DEFAULT NULL,
+  `Salt` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`UserName`),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+/* Create test_table table */
+CREATE TABLE `test_table` (
+  `UserName` varchar(50) NOT NULL,
+  `TestId` int(11) NOT NULL,
+  `TestName` varchar(50) DEFAULT NULL,
+  `Course` varchar(50) DEFAULT NULL,
+  `Proffessor` varchar(20) DEFAULT NULL,
+  `Semester` varchar(20) DEFAULT NULL,
+  `Year` int(4) DEFAULT NULL,
+  `CreatedTime` datetime DEFAULT NULL,
+  PRIMARY KEY (`UserName`),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/* Create question_table table */
+CREATE TABLE `question_table` (
+  `TestId` int(11) NOT NULL,
+  `QuestionId` int(11) NOT NULL,
+  `Question` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`TestId`,`QuestionId`),
+  UNIQUE KEY `TestId_UNIQUE` (`TestId`),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/* Create answer_table table */
+CREATE TABLE `answer_table` (
+  `QuestionId` int(11) NOT NULL,
+  `AnswerId` int(11) NOT NULL,
+  `A` varchar(100) DEFAULT NULL,
+  `B` varchar(50) DEFAULT NULL,
+  `C` varchar(50) DEFAULT NULL,
+  `D` varchar(50) DEFAULT NULL,
+  `E` varchar(50) DEFAULT NULL,
+  `F` varchar(50) DEFAULT NULL,
+  `G` varchar(50) DEFAULT NULL,
+  `H` varchar(50) DEFAULT NULL,
+  `CorrectAnswer` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`AnswerId`,`QuestionId`),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
